@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Three.js Assignment</title>
+  <style>
+    body { margin: 0; font-family: sans-serif; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+    <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+    <script type="module">
+        import { scene, camera, renderer } from './js/initScene.js';
+        import { createProduct } from './js/createProduct.js';
+        import { animate } from './js/cameraAnimation.js';
+        import './js/interaction.js'; // Ensure this runs
+
+        createProduct(scene);
+        animate();
+    </script>
+</body>
+</html>
